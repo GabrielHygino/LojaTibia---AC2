@@ -3,18 +3,31 @@ package projetoloja;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Conexao {
-    
-    String serverName = "localhost";//caminho do servidor do BD
-    String mydatabase = "projetoloja";//nome do BD
-    String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
-    String username = "root";//nome de usuario do BD
-    String password = "1234";//senha do BD
-    Connection conexao;
-    
-    Conexao() throws SQLException{
-        conexao = DriverManager.getConnection(url, username, password);
+    public Conexao () {    
     }
+
+    public static Connection con = null;
     
+    public static void conectar() {
+        String serverName = "localhost";
+        String myDataBase = "usuarios";
+        String url = "jdbc:mysql://" + serverName + "/" + myDataBase;
+        String userName = "root";
+        String password = "1234";
+        
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con =  DriverManager.getConnection(url,userName,password);
+        } catch (ClassNotFoundException ex) {
+            System.out.println("Classe não encontrada, adicione o driver nas bibliotecas.");
+            Logger.getLogger(Conexao.class.getName()).log(Level.SEVERE, null, ex);
+        } catch(SQLException e) {
+            System.out.println(e);
+            throw new RuntimeException(e);
+        }
+    }
 }
