@@ -233,9 +233,6 @@
           </BindingProperties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtSenha">
-          <BindingProperties>
-            <BindingProperty name="nextFocusableComponent" source="txtPassword2" target="txtSenha" targetPath="nextFocusableComponent" updateStrategy="0" immediately="false"/>
-          </BindingProperties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtSenha2">
         </Component>

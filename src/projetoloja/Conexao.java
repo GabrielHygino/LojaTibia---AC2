@@ -11,7 +11,7 @@ public class Conexao {
     }
 
     public static Connection con = null;
-    
+
     public static void conectar() {
         String serverName = "localhost";
         String myDataBase = "usuarios";

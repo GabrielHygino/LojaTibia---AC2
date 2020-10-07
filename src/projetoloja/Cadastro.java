@@ -215,36 +215,11 @@ public class Cadastro extends javax.swing.JFrame {
         
         this.nome = txtNome.getText();
         this.email = txtEmail.getText();
-        this.senha = txtSenha.getPassword().toString();
+        this.senha = String.valueOf(txtSenha.getPassword());
         this.telefone = txtTelefone.getText();
         
-        try {
-            
-            String comando = "insert into usuario values (null, ?, ?, ?, ?)";
-            
-            Conexao.conectar();
-            
-            //cria o comando
-            PreparedStatement stmt = Conexao.con.prepareStatement(comando);
-            
-            //
-            stmt.setString(1, this.nome);
-            stmt.setString(2, this.email);   
-            stmt.setString(3, this.senha);
-            stmt.setString(4, this.telefone);
-            
-            //executa o comando
-            stmt.executeUpdate();
-            
-            //fecha o comando e a conexao
-            stmt.close();
-            Conexao.con.close();
-            
-            System.out.println("INSERIDO");
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(Cadastro.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        Conexao.conectar();
+        CRUD.inserir(this.nome, this.email, this.senha, this.telefone);
         
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
