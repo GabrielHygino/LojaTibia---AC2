@@ -154,10 +154,20 @@ public class LoginPessoa extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+        
+        if(jTextPane1.getText().equals("root")&&jPasswordField1.getText().equals("1234")){
+            CadastrarProduto ADM = new CadastrarProduto();
+            ADM.setVisible(true);
+            
+            LoginPessoa login = new LoginPessoa();
+            login.dispose();
+        } else{
+            dispose();
         
         
         
-        
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
