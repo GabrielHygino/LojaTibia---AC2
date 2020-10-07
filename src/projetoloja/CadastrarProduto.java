@@ -134,7 +134,9 @@ public class CadastrarProduto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        dispose();
+        Home inicio = new Home();
+        this.dispose();
+        inicio.setVisible(true);
     }//GEN-LAST:event_btnSairActionPerformed
 
     /**

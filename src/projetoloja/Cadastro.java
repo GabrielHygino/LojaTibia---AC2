@@ -5,15 +5,21 @@
  */
 package projetoloja;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.sql.*;
+
 /**
  *
  * @author João H.B
  */
 public class Cadastro extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Cadastro
-     */
+    String nome;
+    String email;
+    String senha;
+    String telefone;
+    
     public Cadastro() {
         initComponents();
     }
@@ -26,30 +32,23 @@ public class Cadastro extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        txtNome = new javax.swing.JTextPane();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txtSenha = new javax.swing.JTextPane();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        txtConfirmarSenha = new javax.swing.JTextPane();
         jLabel5 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        txtEmail = new javax.swing.JTextPane();
         jLabel6 = new javax.swing.JLabel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        txtTelefone = new javax.swing.JTextPane();
         btnCadastrar = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        txtTelefone1 = new javax.swing.JTextPane();
+        txtNome = new javax.swing.JTextField();
+        txtSenha = new javax.swing.JPasswordField();
+        txtSenha2 = new javax.swing.JPasswordField();
+        txtEmail = new javax.swing.JTextField();
+        txtTelefone = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -81,12 +80,8 @@ public class Cadastro extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jScrollPane1.setViewportView(txtNome);
-
         jLabel2.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel2.setText("Nome");
-
-        jScrollPane2.setViewportView(txtSenha);
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel3.setText("Senha");
@@ -94,19 +89,17 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel4.setText("Confirme sua Senha");
 
-        jScrollPane3.setViewportView(txtConfirmarSenha);
-
         jLabel5.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel5.setText("E-mail");
-
-        jScrollPane4.setViewportView(txtEmail);
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel6.setText("Celular");
 
-        jScrollPane5.setViewportView(txtTelefone);
-
         btnCadastrar.setText("Cadastrar");
+
+        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, txtNome, org.jdesktop.beansbinding.ObjectProperty.create(), btnCadastrar, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
+        bindingGroup.addBinding(binding);
+
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCadastrarActionPerformed(evt);
@@ -114,16 +107,27 @@ public class Cadastro extends javax.swing.JFrame {
         });
 
         btnSair.setText("Sair");
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, btnCadastrar, org.jdesktop.beansbinding.ObjectProperty.create(), btnSair, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
+        bindingGroup.addBinding(binding);
+
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSairActionPerformed(evt);
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
-        jLabel7.setText("Telefone");
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, txtSenha, org.jdesktop.beansbinding.ObjectProperty.create(), txtNome, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
+        bindingGroup.addBinding(binding);
 
-        jScrollPane6.setViewportView(txtTelefone1);
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, new javax.swing.JPasswordField(), org.jdesktop.beansbinding.ObjectProperty.create(), txtSenha, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
+        bindingGroup.addBinding(binding);
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, txtTelefone, org.jdesktop.beansbinding.ObjectProperty.create(), txtEmail, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
+        bindingGroup.addBinding(binding);
+
+        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, btnSair, org.jdesktop.beansbinding.ObjectProperty.create(), txtTelefone, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
+        bindingGroup.addBinding(binding);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -133,33 +137,27 @@ public class Cadastro extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4)
-                    .addComponent(jScrollPane1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel5))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(txtEmail)
+                    .addComponent(txtNome)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel5)
                             .addComponent(jLabel6)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(44, 44, 44))
+                            .addComponent(txtSenha2)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtTelefone, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSair, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -169,35 +167,24 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel4))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(28, 28, 28))
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addGap(28, 28, 28))
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(28, 28, 28))
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSenha2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -217,16 +204,54 @@ public class Cadastro extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
+        bindingGroup.bind();
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+        
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
+        
+        this.nome = txtNome.getText();
+        this.email = txtEmail.getText();
+        this.senha = txtSenha.getPassword().toString();
+        this.telefone = txtTelefone.getText();
+        
+        try {
+            
+            String comando = "insert into usuario values (null, ?, ?, ?, ?)";
+            
+            Conexao.conectar();
+            
+            //cria o comando
+            PreparedStatement stmt = Conexao.con.prepareStatement(comando);
+            
+            //
+            stmt.setString(1, this.nome);
+            stmt.setString(2, this.email);   
+            stmt.setString(3, this.senha);
+            stmt.setString(4, this.telefone);
+            
+            //executa o comando
+            stmt.executeUpdate();
+            
+            //fecha o comando e a conexao
+            stmt.close();
+            Conexao.con.close();
+            
+            System.out.println("INSERIDO");
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Cadastro.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        dispose();
+        Home teste2 = new Home();
+        this.dispose();
+        teste2.setVisible(true);
     }//GEN-LAST:event_btnSairActionPerformed
 
     /**
@@ -273,20 +298,13 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTextPane txtConfirmarSenha;
-    private javax.swing.JTextPane txtEmail;
-    private javax.swing.JTextPane txtNome;
-    private javax.swing.JTextPane txtSenha;
-    private javax.swing.JTextPane txtTelefone;
-    private javax.swing.JTextPane txtTelefone1;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JPasswordField txtSenha;
+    private javax.swing.JPasswordField txtSenha2;
+    private javax.swing.JTextField txtTelefone;
+    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }
