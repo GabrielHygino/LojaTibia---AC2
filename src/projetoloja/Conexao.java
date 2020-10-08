@@ -14,7 +14,7 @@ public class Conexao {
 
     public static void conectar() {
         String serverName = "localhost";
-        String myDataBase = "projetoloja";
+        String myDataBase = "tibia";
         String url = "jdbc:mysql://" + serverName + "/" + myDataBase;
         String userName = "root";
         String password = "1234";

@@ -219,7 +219,11 @@ public class Cadastro extends javax.swing.JFrame {
         this.telefone = txtTelefone.getText();
         
         Conexao.conectar();
-        CRUD.inserir(this.nome, this.email, this.senha, this.telefone);
+        CRUD.inserir(this.nome, this.senha, this.email, this.telefone);
+        
+        this.dispose();
+        LoginPessoa login = new LoginPessoa();
+        login.setVisible(true);
         
     }//GEN-LAST:event_btnCadastrarActionPerformed
 

@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 
 public class CRUD {
     
-    public static void inserir(String nome, String email, String senha, String telefone){
+    public static void inserir(String nome, String senha, String email, String telefone){
         try {
             
             String comando = "insert into usuario values (null, ?, ?, ?, ?)";
@@ -17,8 +17,8 @@ public class CRUD {
             
             //variaveis
             stmt.setString(1, nome);
-            stmt.setString(2, email);   
-            stmt.setString(3, senha);
+            stmt.setString(2, senha);   
+            stmt.setString(3, email);
             stmt.setString(4, telefone);
             
             //executa o comando

@@ -186,18 +186,17 @@ public class LoginPessoa extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
  
-        //Acesso Padrão
-            
+        //Acesso Padrão           
             email = txtEmailLogin.getText();
             senha = String.valueOf(txtSenha.getPassword());
             
             
         try {
             
-            String comando = "select email, senha from usuario where email = " + email + " and senha = " + senha ;
+            String comando = "select email, senha from usuario where email = '" + email + "' and senha = '" + senha + "'";
            
             Statement stm = Conexao.con.createStatement();
-            ResultSet rS = stm.executeQuery("select email, senha from usuario where email = '" + email + "' and senha = '" + senha + "'");
+            ResultSet rS = stm.executeQuery(comando);
             
             rS.next();
             int nR = rS.getRow();
