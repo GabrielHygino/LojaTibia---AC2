@@ -15,7 +15,7 @@ public class CRUD {
             //cria o comando
             PreparedStatement stmt = Conexao.con.prepareStatement(comando);
             
-            //
+            //variaveis
             stmt.setString(1, nome);
             stmt.setString(2, email);   
             stmt.setString(3, senha);
