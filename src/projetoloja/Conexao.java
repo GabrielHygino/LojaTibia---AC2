@@ -17,8 +17,8 @@ public class Conexao {
         String myDataBase = "tibia";
         String url = "jdbc:mysql://" + serverName + "/" + myDataBase;
         String userName = "root";
-        String password = "1234";
-        
+        String password = "";
+      
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con =  DriverManager.getConnection(url,userName,password);

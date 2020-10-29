@@ -10,7 +10,7 @@ public class CRUD {
     public static void inserir(String nome, String senha, String email, String telefone){
         try {
             
-            String comando = "insert into usuario values (null, ?, ?, ?, ?)";
+            String comando = "insert into cadastro values (null, ?, ?, ?, ?)";
 
             //cria o comando
             PreparedStatement stmt = Conexao.con.prepareStatement(comando);
