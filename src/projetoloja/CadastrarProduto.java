@@ -64,6 +64,7 @@ public class CadastrarProduto extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/aaaaaaaaaaaaaaaa.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
+        btnSair.setBackground(new java.awt.Color(255, 255, 255));
         btnSair.setText("X");
         btnSair.setBorderPainted(false);
         btnSair.setFocusPainted(false);
@@ -74,10 +75,16 @@ public class CadastrarProduto extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Cadastrar");
+        jButton2.setBackground(new java.awt.Color(255, 255, 255));
+        jButton2.setText("Cadastrar Produto");
         jButton2.setBorderPainted(false);
         jButton2.setFocusPainted(false);
         jButton2.setFocusable(false);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel2.setText("---Só ADM'S nesta área jovem!");
@@ -134,10 +141,18 @@ public class CadastrarProduto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        Home inicio = new Home();
+        Home voltar = new Home();
         this.dispose();
-        inicio.setVisible(true);
+        voltar.setVisible(true);
     }//GEN-LAST:event_btnSairActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        CadastroDeProduto cadP = new CadastroDeProduto();
+        this.dispose();
+        cadP.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

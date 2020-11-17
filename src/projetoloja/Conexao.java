@@ -7,9 +7,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Conexao {
-    public Conexao () {    
+    public Conexao () { 
+               
     }
-
+    
     public static Connection con = null;
 
     public static void conectar() {

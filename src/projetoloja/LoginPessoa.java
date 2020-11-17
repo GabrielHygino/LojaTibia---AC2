@@ -87,6 +87,7 @@ public class LoginPessoa extends javax.swing.JFrame {
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/testeaaa.png"))); // NOI18N
         jLabel3.setText("jLabel2");
 
+        btnLogin.setBackground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, txtEmailLogin, org.jdesktop.beansbinding.ObjectProperty.create(), btnLogin, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
@@ -103,6 +104,7 @@ public class LoginPessoa extends javax.swing.JFrame {
             }
         });
 
+        btnSair.setBackground(new java.awt.Color(255, 255, 255));
         btnSair.setText("Voltar");
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, btnLogin, org.jdesktop.beansbinding.ObjectProperty.create(), btnSair, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
@@ -189,29 +191,29 @@ public class LoginPessoa extends javax.swing.JFrame {
         //Acesso Padrão           
             email = txtEmailLogin.getText();
             senha = String.valueOf(txtSenha.getPassword());
-            
-            
+   
         try {
             
             String comando = "select email, senha from cadastro where email = '" + email + "' and senha = '" + senha + "'";
+            
            
             Statement stm = Conexao.con.createStatement();
             ResultSet rS = stm.executeQuery(comando);
             
             rS.next();
             int nR = rS.getRow();
-            
-            
-            
+             
             stm.close();       
             Conexao.con.close();
 
-            if(nR == 1){
+            if(txtEmailLogin.getText().equals("root")&&txtSenha.getText().equals("root")){
+            CadastrarProduto ADM = new CadastrarProduto();
+            ADM.setVisible(true);
+
+            this.dispose();
+            } else if(nR == 1){
                 System.out.println(nR);
                 JOptionPane.showMessageDialog(rootPane, "Logado");
-                
-                //colocar para abrir a loja
-                
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Email ou Senha errados.");
                 this.dispose();

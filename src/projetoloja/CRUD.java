@@ -31,9 +31,59 @@ public class CRUD {
             
         } catch (SQLException ex) {
             Logger.getLogger(Cadastro.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        } 
     }
     
+    public static void inserirProduto(String nome, int qtd, String descProduto, double preco){
+        try {
+            
+            String comando = "insert into produtos values (null, ?, ?, ?, ?)";
+
+            //cria o comando
+            PreparedStatement stmt = Conexao.con.prepareStatement(comando);
+            
+            //variaveis
+            stmt.setString(1, nome);
+            stmt.setInt(2, qtd);   
+            stmt.setString(3, descProduto);
+            stmt.setDouble(4, preco);
+            
+            //executa o comando
+            stmt.executeUpdate();
+            
+            stmt.close();
+            Conexao.con.close();
+   
+            System.out.println("PRODUTO INSERIDO");
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Cadastro.class.getName()).log(Level.SEVERE, null, ex);
+        }    
+    }
     
-    
+    public static void deletarProduto(int idProduto){
+        try {
+            
+            String comando = "delete from produtos where idProduto=?";
+
+            //cria o comando
+            PreparedStatement stmt = Conexao.con.prepareStatement(comando);
+            
+            //variaveis
+            stmt.setInt(1, idProduto);
+            
+            
+            //executa o comando
+            stmt.executeUpdate();
+            
+            stmt.close();
+            Conexao.con.close();
+   
+            System.out.println("PRODUTO APAGADO");
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Cadastro.class.getName()).log(Level.SEVERE, null, ex);
+        }    
+    }
+   
 }
