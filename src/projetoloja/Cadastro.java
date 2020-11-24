@@ -49,15 +49,17 @@ public class Cadastro extends javax.swing.JFrame {
         txtSenha2 = new javax.swing.JPasswordField();
         txtEmail = new javax.swing.JTextField();
         txtTelefone = new javax.swing.JFormattedTextField();
+        texto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(204, 204, 204));
         setUndecorated(true);
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Arial", 2, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,7 +71,7 @@ public class Cadastro extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(128, 128, 128)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -80,22 +82,24 @@ public class Cadastro extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Maiandra GD", 0, 15)); // NOI18N
         jLabel2.setText("Nome");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Maiandra GD", 0, 15)); // NOI18N
         jLabel3.setText("Senha");
 
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Maiandra GD", 0, 15)); // NOI18N
         jLabel4.setText("Confirme sua Senha");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Maiandra GD", 0, 15)); // NOI18N
         jLabel5.setText("E-mail");
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Maiandra GD", 0, 15)); // NOI18N
         jLabel6.setText("Celular");
 
         btnCadastrar.setBackground(new java.awt.Color(255, 255, 255));
+        btnCadastrar.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
+        btnCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projetoloja/livru.png"))); // NOI18N
         btnCadastrar.setText("Cadastrar");
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, txtNome, org.jdesktop.beansbinding.ObjectProperty.create(), btnCadastrar, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
@@ -108,6 +112,8 @@ public class Cadastro extends javax.swing.JFrame {
         });
 
         btnSair.setBackground(new java.awt.Color(255, 255, 255));
+        btnSair.setFont(new java.awt.Font("Maiandra GD", 0, 14)); // NOI18N
+        btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/setaPoha.png"))); // NOI18N
         btnSair.setText("Voltar");
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, btnCadastrar, org.jdesktop.beansbinding.ObjectProperty.create(), btnSair, org.jdesktop.beansbinding.BeanProperty.create("nextFocusableComponent"));
@@ -136,14 +142,18 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
 
+        texto.setFont(new java.awt.Font("Maiandra GD", 0, 48)); // NOI18N
+        texto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/LIVRUTOP.png"))); // NOI18N
+        texto.setText("Cadastrar");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtEmail)
                     .addComponent(txtNome)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -164,14 +174,18 @@ public class Cadastro extends javax.swing.JFrame {
                         .addGap(18, 71, Short.MAX_VALUE)
                         .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(texto))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(texto)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -291,6 +305,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel texto;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNome;
     private javax.swing.JPasswordField txtSenha;
