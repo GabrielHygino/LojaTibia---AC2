@@ -298,6 +298,7 @@ public class CadastroDeProduto extends javax.swing.JFrame {
     private void btnDeletarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarActionPerformed
         // TODO add your handling code here:
         
+        
         if(jTProdutos.getSelectedRow() != -1){
          
             DefaultTableModel dtmProdutos = (DefaultTableModel) jTProdutos.getModel();

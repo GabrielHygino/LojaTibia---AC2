@@ -201,8 +201,7 @@ public class LoginPessoa extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
- 
-        //Acesso Padrão           
+      
             email = txtEmailLogin.getText();
             senha = String.valueOf(txtSenha.getPassword());
    
@@ -228,6 +227,11 @@ public class LoginPessoa extends javax.swing.JFrame {
             } else if(nR == 1){
                 System.out.println(nR);
                 JOptionPane.showMessageDialog(rootPane, "Logado");
+                
+                HomePosLogin homi = new HomePosLogin();
+                this.dispose();
+                homi.setVisible(true);
+                
             }else{
                 JOptionPane.showMessageDialog(rootPane, "Email ou Senha errados.");
                 this.dispose();
