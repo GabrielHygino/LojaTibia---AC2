@@ -1,3 +1,12 @@
+<h1>
+    <img src="https://ik.imagekit.io/zuztejak0m/Principal_oJWaJGgia.png">
+</h1>
+
+![](https://img.shields.io/github/languages/count/GabrielHygino/LojaTibia---AC2)
+![](https://img.shields.io/github/contributors/GabrielHygino/LojaTibia---AC2)
+![](https://img.shields.io/github/last-commit/GabrielHygino/LojaTibia---AC2)
+![](https://img.shields.io/github/repo-size/GabrielHygino/LojaTibia---AC2)
+
 <h1 align="center">
     <img src="https://ik.imagekit.io/zuztejak0m/map_big_8dVPlgRHeo.png">
 </h1>
