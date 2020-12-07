@@ -73,5 +73,5 @@ O projeto <b>TIBIASTORE</b> foi criado no 2ºSemestre de ADS da Universidade FAC
 ### 💿Exemplo do Projeto
 
 <h1 align="center">
-   <img src="https://ik.imagekit.io/zuztejak0m/Hnet-image_BIK81q1iH.gif"> 
+   <img src="https://ik.imagekit.io/zuztejak0m/ezgif-6-d354a57ee2bc_hfKGGfG1t.gif"> 
 </h1>
