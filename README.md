@@ -17,7 +17,7 @@
     <img src="https://ik.imagekit.io/zuztejak0m/teste_YeC6mOWJV.png">
 </h1>
 
-<p>- <a href="https://github.com/GabrielHygino">Gabriel Hygino</a>. - RM: 200846 </p> 
+<p>- <a href="https://github.com/GabrielHygino">Gabriel Hygino</a> - RM: 200846 </p> 
 
 - Vinicius Siqueira - RA: 200766 
 - Henrique Maia Patricio - RA: 200643 
