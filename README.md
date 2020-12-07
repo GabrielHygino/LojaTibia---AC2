@@ -39,11 +39,11 @@ O projeto <b>TIBIASTORE</b> foi criado no 2ºSemestre de ADS da Universidade FAC
 
 
 <span>
-    <img src="https://ik.imagekit.io/zuztejak0m/java-23-225999_iskhcwNdD.webp" witdth="42" height="42" <p>- <a href="https://netbeans.org/">Java</a></p>   
+    <img src="https://ik.imagekit.io/zuztejak0m/java-23-225999_iskhcwNdD.webp" witdth="42" height="42" <p align="center">- <a href="https://netbeans.org/">Java</a></p>   
 </span>
 
 <span>
-    <img src="https://ik.imagekit.io/zuztejak0m/mysql-6-226028_KPfftuvmJ.webp" witdth="42" height="42" <p>- <a href="https://www.mysql.com/">MySQL</a></p> 
+    <img src="https://ik.imagekit.io/zuztejak0m/mysql-6-226028_KPfftuvmJ.webp" witdth="42" height="42" <p align="center">- <a href="https://www.mysql.com/">MySQL</a></p> 
 </span>
 
 
