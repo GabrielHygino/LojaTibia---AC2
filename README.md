@@ -28,9 +28,10 @@ O projeto **TIBIASTORE** foi criado no 2ºSemestre de ADS da Universidade FACENS
 </h1>
 
 
-<img src="https://ik.imagekit.io/zuztejak0m/java_o_Sn59CmJ.png" alt="Java" title="Javão"/>
+
 <span>
-    - Java(https://netbeans.org/)
+    <img src="https://ik.imagekit.io/zuztejak0m/java_o_Sn59CmJ.png" alt="Java" title="Javão"/>
+    <p>- Java(https://netbeans.org/)</p>
 </span>
 
 
