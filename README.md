@@ -12,10 +12,10 @@
 - João Henrique Batista - RA: 200665 
 - Samuel Araújo - RA: 200641
 
+
 <h1 >
     <img src="https://ik.imagekit.io/zuztejak0m/Sobre_2yv07Fzb2.png">
 </h1>
-
 O projeto **TIBIASTORE** foi criado no 2ºSemestre de ADS da Universidade FACENS, com o intuito de ser uma loja que vende itens de um dos jogos mais conhecidos da historia, o projeto **TIBIASTORE** é uma loja online onde a pessoa possa se cadastrar e desfrutar de uma loja com milhares de itens de seu jogo favorito, não precisando ter seu endereço divulgado pois os itens comprados vão diretamente a sua conta do jogo, facilitando a velocidade para conseguir fazer suas quests e farms. 
 
 ### 💻Tecnologias Usadas
