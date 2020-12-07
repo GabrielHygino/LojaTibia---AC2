@@ -17,7 +17,11 @@
     <img src="https://ik.imagekit.io/zuztejak0m/teste_YeC6mOWJV.png">
 </h1>
 
-- Gabriel Hygino - RA: 200846 
+<p>
+<a https://github.com/GabrielHygino">Gabriel Hygino</a>.
+</p>
+
+- Gabriel Hygino -  
 - Vinicius Siqueira - RA: 200766 
 - Henrique Maia Patricio - RA: 200643 
 - João Henrique Batista - RA: 200665 
