@@ -26,7 +26,7 @@ O projeto **TIBIASTORE** foi criado no 2ºSemestre de ADS da Universidade FACENS
 - [Java](https://netbeans.org/)<br>
 - [MySQL](https://www.mysql.com/)
 
-
+<br><br>
 
 ### 💾Diagrama de Entidade e Relacionamento
 <h1 align="center">
