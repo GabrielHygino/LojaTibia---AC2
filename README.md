@@ -2,7 +2,9 @@
     <img src="https://ik.imagekit.io/zuztejak0m/map_big_8dVPlgRHeo.png">
 </h1>
 
-### 🙍‍Equipe
+<h1 >
+    <img src="https://ik.imagekit.io/zuztejak0m/teste_YeC6mOWJV.png">
+</h1>
 
 - Gabriel Hygino - RA: 200846 
 - Vinicius Siqueira - RA: 200766 
