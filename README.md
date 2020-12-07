@@ -12,10 +12,6 @@
 </h1>
 
 <br><br>
-
-<div style="visibility: hidden"> 
-texto
- </div>
  
 <h1 >
     <img src="https://ik.imagekit.io/zuztejak0m/teste_YeC6mOWJV.png">
