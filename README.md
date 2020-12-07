@@ -50,7 +50,7 @@ O projeto <b>TIBIASTORE</b> foi criado no 2ºSemestre de ADS da Universidade FAC
 <br><br>
 
 <h1 >
-    <img src="https://ik.imagekit.io/zuztejak0m/DiagramaDeEntidade_F1YaEzIlW.png">
+    <img src="https://ik.imagekit.io/zuztejak0m/DiagramaDeClasses_Pb_RJCqB5.png">
 </h1>
 
 <h1 align="center">
@@ -60,10 +60,15 @@ O projeto <b>TIBIASTORE</b> foi criado no 2ºSemestre de ADS da Universidade FAC
 
 <br><br>
 
-### 🔑Diagrama de Classes
+<h1 >
+    <img src="https://ik.imagekit.io/zuztejak0m/DiagramaDeEntidade_F1YaEzIlW.png">
+</h1>
+
 <h1 align="center">
     <img src="https://ik.imagekit.io/zuztejak0m/BancoCorreto_NsFb5q21e.png">
 </h1>
+
+<br><br>
 
 ### 💿Exemplo do Projeto
 
