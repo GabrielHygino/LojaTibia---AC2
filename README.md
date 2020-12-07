@@ -65,7 +65,7 @@ O projeto <b>TIBIASTORE</b> foi criado no 2ºSemestre de ADS da Universidade FAC
 </h1>
 
 <h1 align="center">
-    <img src="https://ik.imagekit.io/zuztejak0m/BancoCorreto_NsFb5q21e.png">
+    <img src="https://ik.imagekit.io/zuztejak0m/DER_vR4j1sXLk.jpg">
 </h1>
 
 <br><br>
