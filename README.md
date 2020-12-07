@@ -17,12 +17,12 @@
     <img src="https://ik.imagekit.io/zuztejak0m/teste_YeC6mOWJV.png">
 </h1>
 
-<p>- <a href="https://github.com/GabrielHygino">Gabriel Hygino</a> - RM: 200846 </p> 
+<p>- <a href="https://github.com/GabrielHygino">Gabriel Hygino</a> - RA: 200846 </p> 
+<p>- <a href="https://github.com/viniciusIT7">Vinicius Siqueira</a> - RA: 200766 </p> 
+<p>- <a href="https://github.com/aiseu">Henrique Maia Patricio</a> - RA: 200643 </p> 
+<p>- <a href="https://github.com/JHenrique404">João Henrique Batista</a> - RA: 200665 </p> 
+<p>- <a href="https://github.com/yr-samuel">Samuel Araújo</a> - RA: 200641 </p> 
 
-- Vinicius Siqueira - RA: 200766 
-- Henrique Maia Patricio - RA: 200643 
-- João Henrique Batista - RA: 200665 
-- Samuel Araújo - RA: 200641
 
 <br><br>
 
