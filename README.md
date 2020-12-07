@@ -17,10 +17,8 @@
     <img src="https://ik.imagekit.io/zuztejak0m/teste_YeC6mOWJV.png">
 </h1>
 
-<p>Deseja entrar em contato com um membro da equipe específica?
-Encontre detalhes sobre nossos serviços em nossa <a href="https://github.com/GabrielHygino">Gabriel Hygino</a>.</p>
+<p>- <a href="https://github.com/GabrielHygino">Gabriel Hygino</a>. - RM: 200846 </p> 
 
-- Gabriel Hygino -  
 - Vinicius Siqueira - RA: 200766 
 - Henrique Maia Patricio - RA: 200643 
 - João Henrique Batista - RA: 200665 
