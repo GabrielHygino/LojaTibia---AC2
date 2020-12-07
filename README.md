@@ -70,6 +70,16 @@ O projeto <b>TIBIASTORE</b> foi criado no 2ºSemestre de ADS da Universidade FAC
 
 <br><br>
 
+<h1 >
+    <img src="https://ik.imagekit.io/zuztejak0m/metodoAgil_QysyngWuY.png">
+</h1>
+
+<h1 align="left">
+    <img src="https://ik.imagekit.io/zuztejak0m/Trelu_ru8Yq5M2_.png">
+</h1>
+
+<br><br>
+
 <h1>
     <img src="https://ik.imagekit.io/zuztejak0m/ExemploProjeto_aDNG3uFi-.png">
 </h1>
