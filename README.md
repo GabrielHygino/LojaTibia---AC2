@@ -17,9 +17,8 @@
     <img src="https://ik.imagekit.io/zuztejak0m/teste_YeC6mOWJV.png">
 </h1>
 
-<p>
-<a https://github.com/GabrielHygino">Gabriel Hygino</a>.
-</p>
+<p>Deseja entrar em contato com um membro da equipe específica?
+Encontre detalhes sobre nossos serviços em nossa <a href="https://github.com/GabrielHygino">Gabriel Hygino</a>.</p>
 
 - Gabriel Hygino -  
 - Vinicius Siqueira - RA: 200766 
