@@ -42,7 +42,7 @@ O projeto **TIBIASTORE** foi criado no 2ºSemestre de ADS da Universidade FACENS
 </span>
 
 <span>
-    <img src="https://ik.imagekit.io/zuztejak0m/68747470733a2f2f77372e706e6777696e672e636f6d2f706e67732f3734372f3739382f706e672d7472616e73706172656e742d6d7973716c2d6c6f676f2d6d7973716c2d64617461626173652d7765622d646576656c6f706d656e742d636f6d70757465722d736f667_IOQHlZINc.png" witdth="42" height="42" <p align="center">- MySQL(https://www.mysql.com/)</p>   
+    <img src="https://ik.imagekit.io/zuztejak0m/mysql-6-226028_KPfftuvmJ.webp" witdth="42" height="42" <p align="center">- MySQL(https://www.mysql.com/)</p>   
 </span>
 
 
